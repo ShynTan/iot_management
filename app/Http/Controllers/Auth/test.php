@@ -13,8 +13,6 @@ public function updateApproval(Request $request)
     $id = $request->input('id');
     $name = $request->input('name');
     $approval = $request->input('approval');
-    // var_dump($id);
-    // $user = DB::select('select * from users where id = "'.$id.'"');
     DB::update('update users set approved = ? where id = ?', [$approval, $id]);
     return redirect()->route('updateUserApproval.user');
 }

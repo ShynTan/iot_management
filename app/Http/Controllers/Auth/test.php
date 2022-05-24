@@ -1,14 +1,14 @@
 <?php
 class AdminController extends Controller
 {
-    function deleteDeviceUnit(Request $request){
+    function deleteDeviceHealth(Request $request){
 
         $id = $request->route('id');
 
-        $res=DB::delete('delete from device_unit where id = ?', [$id]);
+        $res=DB::delete('delete from device_health where id = ?', [$id]);
 
         if($res){
-            return back()->with('success', 'Device Unit ID ' . $request->route('id') . " deleted!");
+            return back()->with('success', 'Device Health ID ' . $request->route('id') . " deleted!");
         }else{
             return back()->with('failed', 'something is wrong');
         }

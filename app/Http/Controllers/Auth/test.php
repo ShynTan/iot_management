@@ -1,10 +1,10 @@
 <?php
 class AdminController extends Controller
 {
-    function addDeviceTypeAction(Request $request)
+    function addDeviceUnitAction(Request $request)
     {
-        $query = DB::table('device_type')->insert([
-            "device_type" => $request->input('device_type'),
+        $query = DB::table('device_unit')->insert([
+            "device_unit" => $request->input('device_unit'),
         ]);
 
         if ($query) {
@@ -18,4 +18,5 @@ class AdminController extends Controller
     {
         return view('admin.add_device_type');
     }
+
 }

@@ -52,12 +52,12 @@
                                         value="{{ $event[0]->pic_id }}">
                                 </div>
 
-                                <div class="row ">
-                                    <div class="col pr-1 pl-0">
+                                 <div class="row ">
+                                 {{--<div class="col pr-1 pl-0">
                                         <label for="device_type">Personal in charge name</label>
                                         <input id="device_type" type="text" class="form-control mb-3" name="pic_name"
                                             value="{{ $event[0]->pic_name }}">
-                                    </div>
+                                    </div>--}}
                                     <div class="col p-0">
                                         <label for="device_uptime">Device ID</label>
                                         <input id="device_uptime" type="text" class="form-control mb-3" name="device_id"
@@ -72,11 +72,11 @@
                                     </div>
                                 </div> --}}
                                 <div class="row">
-                                    <div class="col pr-1 pl-0">
+                                {{--<div class="col pr-1 pl-0">
                                         <label for="device_subnet">Location Id</label>
                                         <input id="device_subnet" type="text" class="form-control mb-3" name="location_id"
                                             value="{{ $event[0]->location_id }}">
-                                    </div>
+                                    </div>--}}
                                 </div>
                                 {{-- <div class="row">
                                     <div class="col pr-1 pl-0">

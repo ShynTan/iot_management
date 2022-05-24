@@ -23,14 +23,15 @@
                             <th>Install date</th>
                             <th>Install time</th>
                             <th>Personal in charge Id</th>
-                            <th>Personal in charge Name</th>
-                            <th>Device Location</th>
-                            <th>Device Status</th>
-                            <th>Device Health</th>
+                            {{--<th>Personal in charge Name</th>--}}
+                            
+                            {{--<th>Device Status</th>--}}
+                            {{--<th>Device Health</th> --}}
                             @if (Auth::user()->role === 'Admin')
                                 <th>Edit</th>
                             @endif
                         </thead>
+                        {{-- <th>Device Location</th> --}}
                             {{-- <th>Device Uptime</th> --}}
                             {{-- <th>Device IP</th> --}}
                             {{-- <th>Device Subnet</th> --}}
@@ -44,17 +45,18 @@
                                     <td>{{ $item->install_date }}</td>
                                     <td>{{ $item->install_time }}</td>
                                     <td>{{ $item->pic_id }}</td>
-                                    <td>{{ $item->pic_name }}</td>
-                                    <td>{{ $item->device_id }}</td>
-                                    <td>{{ $item->status_id }}</td>
-                                    <td>{{ $item->location_id }}</td>
-                                    {{-- <td>{{ $item->device_uptime }}</td> --}}
-                                    {{-- <td>{{ $item->device_ip }}</td> --}}
-                                    {{-- <td>{{ $item->device_subnet }}</td> --}}
+                                    {{--<td>{{ $item->pic_name }}</td>--}}
+                                    {{--<td>{{ $item->device_id }}</td>--}}
+                                    {{--<td>{{ $item->status_id }}</td>--}}
                                     @if (Auth::user()->role === 'Admin')
                                         <td><a class="btn btn-success btn-sm btn-block"
                                                 href="{{ route('updateEvent.admin', $item->event_id) }}">Edit</a></td>
                                     @endif
+                                    {{--<td>{{ $item->location_id }}</td>--}}
+                                    {{-- <td>{{ $item->device_uptime }}</td> --}}
+                                    {{-- <td>{{ $item->device_ip }}</td> --}}
+                                    {{-- <td>{{ $item->device_subnet }}</td> --}}
+                                    
                                 </tr>
                             @endforeach
                         </tbody>

@@ -1,24 +1,25 @@
 <?php
 class AdminController extends Controller
 {
-    public function viewProfile()
+    function edit_event(Request $request)
     {
-        $id = Auth::user()->id;
-        $user = DB::select('select * from users where id = "' . $id . '"');
-        $result = false;
-        return view('user.profile')->with('user', $user)->with('result', $result);
-    }
+        $query = DB::table('event')
+            ->where(
+                'event_id',
+                $request->input('id')
+            )
+            ->update([
+                "install_date" => $request->input('install_date'),
+                "install_time" => $request->input('install_time'),
+                "pic_id" => $request->input('pic_id'),
+                "device_id" => $request->input('device_id')
+            ]);
 
-    public function updateuserinfo(Request $request)
-    {
-        $id = $request->input('id');
-        $email = $request->input('email');
-        $name = $request->input('name');
-
-        $result = DB::update('update users set email = ?, name=? where id = ?',[$email,$name,$id]);
-
-        $user = DB::select('select * from users where id = "' . $id . '"');
-        return view('user.profile')->with('user', $user)->with('result', $result);
-
+        if ($query) {
+            return back()->with('success', 'Record has been successfully updated');
+        } else {
+            // return $query;
+            return back()->with('fail', 'Something went wrong');
+        }
     }
 }

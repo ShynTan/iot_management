@@ -30,12 +30,12 @@
                             @if (Auth::user()->role === 'Admin')
                                 <th>Edit</th>
                             @endif
-
+                        </thead>
                             {{-- <th>Device Uptime</th> --}}
                             {{-- <th>Device IP</th> --}}
                             {{-- <th>Device Subnet</th> --}}
 
-                        </thead>
+                        
                         <tbody>
                             @foreach ($list as $item)
                                 <tr>

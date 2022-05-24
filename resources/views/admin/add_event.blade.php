@@ -35,7 +35,7 @@
                             {{ csrf_field() }}
                             <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                             <div class="row">
-                                <label for="install_date">Installation date</label>
+                                <label for="install_date">Installation Date</label>
                                 <input id="install_date" type="date" class="form-control mb-3" name="install_date" required>
                             </div>
                             <div class="row">
@@ -44,7 +44,7 @@
                             </div>
                             <div class="row">
                                 <div class="col pr-1 pl-0">
-                                    <label for="pic_id">Person In Charge Id</label>
+                                    <label for="pic_id">Person In Charge ID</label>
                                     <input id="pic_id" type="text" class="form-control mb-3" name="pic_id" required>
                                 </div>
                                 <!-- 
@@ -55,7 +55,7 @@
                             </div>
                             <div class="row">
                                 <div class="col pr-1 pl-0">
-                                    <label for="device_id">Device Id</label>
+                                    <label for="device_id">Device ID</label>
                                     {{-- <input id="device_id" type="number" class="form-control mb-3" name="device_id" required> --}}
                                     <select name="device_id" id="" class="form-control mb-3" required>
                                         @foreach ($list as $item)

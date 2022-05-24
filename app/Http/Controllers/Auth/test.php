@@ -13,4 +13,9 @@ class AdminController extends Controller
             return back()->with('fail', 'Something went wrong');
         }
     }
+
+    function addDeviceTypeView()
+    {
+        return view('admin.add_device_type');
+    }
 }

@@ -206,7 +206,7 @@
         <script>
             /* INIT ZoomMarker here **/
             jQuery(document).ready(function($) {
-                /******************* init navigator button, no need for users' initialization *********************/
+                /******init navigator button, no need for users' initialization *****/
                 var picTag = 0;
                 var tagNumber = 1;
 
@@ -270,7 +270,7 @@
                                 "border-color": "#86df5f"
                             }
                         };
-                        // 画线
+                        // 画线 
                         const context = item.zoomMarker_Canvas();
                         if (context !== null) {
                             context.strokeStyle = 'red';

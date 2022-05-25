@@ -20,7 +20,7 @@ use App\Http\Controllers\EventController;
 
 Route::get('user', [UserController::class, 'index']);
 
-///// Admin routes //////
+
 
 Route::get('admin/dashboard', [AdminController::class, 'index']);
 

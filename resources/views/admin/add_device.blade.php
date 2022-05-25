@@ -204,7 +204,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
 
         <script>
-            /* INIT ZoomMarker here **/
+            /* INIT ZoomMarker  **/
             jQuery(document).ready(function($) {
                 /******init navigator button, no need for users' initialization *****/
                 var picTag = 0;
@@ -215,7 +215,7 @@
                     $('#zoom-marker-img').zoomMarker_CanvasClean();
                 });
 
-                // this array stores the styles for EASY-LOADING
+                // this array stores styles for EASY-LOADING
                 var styleList = [
                     "BALL_PULSE",
                     "BALL_CLIP_ROTATE", "BALL_CLIP_ROTATE_PULSE", "SQURE_SPIN", "BALL_CLIP_ROTATE_MULTIPLE",
@@ -367,6 +367,6 @@
                 });
 
             })
-            /******************** INIT ZoomMarker here *****************************/
+            
         </script>
     @endsection

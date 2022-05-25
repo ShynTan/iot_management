@@ -81,7 +81,7 @@
         <div class="row justify-content-center">
             <div class="col-3 text-center">
                 <div class="loader">
-                    IOT Management System
+                    IOT Device Management System
                 </div>
             </div>
         </div>
